@@ -80,9 +80,11 @@ Translate business requirements into clear system requirements.
 ### **Database Developer vs Application Programmer**
 
 ### 1. **Database Developer**
+
 **Responsible for**: Database creation - Security - Performance - Queries
 
 ### 2. **Application Programmer**
+
 **Responsible for**: Building the application - GUI / Interface - Communicating with the database
 ---
 ### **Application Architecture(A simplified architecture)**
