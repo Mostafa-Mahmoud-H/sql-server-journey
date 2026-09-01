@@ -72,4 +72,19 @@ Translate business requirements into clear system requirements.
 
 * The **End User** normally interacts with the application, **not directly with the database**.
 ---
-**DB architecture in production could be** : Centralized - distributed DB - Replication - Sharding - Cloud DB - Multi-tenant DB.
+* Notes : 
+    1. **DB architecture in production could be** : Centralized - distributed DB - Replication - Sharding - Cloud DB - Multi-tenant DB.
+    2. The same database can be used by multiple applications:
+    3. The programming language used to build the application is not necessarily tied to the database vendor ex : SQL Server can be used with C#, Java, Python, etc, not just C#. 
+---
+### **Database Developer vs Application Programmer**
+
+### 1. **Database Developer**
+**Responsible for**: Database creation - Security - Performance - Queries
+
+### Application Programmer
+**Responsible for**: Building the application - GUI / Interface - Communicating with the database
+---
+### **Application Architecture***(A simplified architecture)*****
+* The **End User** interacts with the **Application**, not directly with the Database, When the application needs data, it sends **SQL queries** to the **Database Server**.
+* Database Server, **executes the query**, **returns data**, Application **displays the result** to the End User.
