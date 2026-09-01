@@ -85,6 +85,6 @@ Translate business requirements into clear system requirements.
 ### 2. **Application Programmer**
 **Responsible for**: Building the application - GUI / Interface - Communicating with the database
 ---
-### **Application Architecture***(A simplified architecture)*****
+### **Application Architecture(A simplified architecture)**
 * The **End User** interacts with the **Application**, not directly with the Database, When the application needs data, it sends **SQL queries** to the **Database Server**.
 * Database Server, **executes the query**, **returns data**, Application **displays the result** to the End User.
