@@ -90,3 +90,55 @@ Translate business requirements into clear system requirements.
 ### **Application Architecture(A simplified architecture)**
 * The **End User** interacts with the **Application**, not directly with the Database, When the application needs data, it sends **SQL queries** to the **Database Server**.
 * Database Server, **executes the query**, **returns data**, Application **displays the result** to the End User.
+---
+---
+## **Database System Components**
+1. **Database** : consists of **structured tables** connected through **relationships**.
+2. **Database Management System (DBMS)** : A software that **manages the database** and provides an interface for users to interact with the database.
+3. **Database Application** : A software that **interacts with the database** to perform specific tasks, such as data entry, retrieval, and reporting. 
+---
+## Data vs Metadata
+
+### Data
+* The actual values stored in the database.
+
+### Metadata
+* Data that describes the structure and organization of the data (Table names, Column names, Data types, Relationships, Primary keys, Foreign keys, Constraints), **ERD mainly represents metadata about the database structure.**
+---
+## **`Primary Key`**
+
+* A primary key uniquely identifies each row in a table (Unique + NOT NULL = PK)
+---
+## **`Foreign Key`**
+
+* A foreign key is used to establish a relationship between tables by referencing a key in another table, **Foreign keys help maintain referential integrity.**
+
+---
+## **`NULL`**
+
+* **`NULL`** represents an **unknown** or **missing value**, NOT an empty string or zero. It indicates that the value is not applicable or not provided, So is SQL, we write **`where x IS NULL`**, not where x = NULL, because **`NULL`** **is not a value, it is a state of being unknown or missing.** 
+---
+## **`Constraints`**
+
+* Constraints are rules enforced by the database on stored data (Primary Key, Foreign Key, Not Null, Unique, Check).
+---
+---
+## **ER Diagram**
+
+* An **Entity-Relationship Diagram** (ERD) is a **modeling technique** used **to transform system requirements into a visual model that describes the main components of a system and the relationships between them**.
+
+* **The main components are:**
+- **Entities** : represents an important object/concept in the system about which we need to store data (Drawn as Rectangel).
+- **Attributes** : An attribute describes a characteristic/property of an entity (Drawn as Circle/Oval).
+- **Relationships** : A relationship represents an association between entities (Drawn as Diamond).
+---
+
+### **Some important concepts**
+* **Relationship Attributes**: Belong to the association between entities, not a single entity (e.g., Grade belongs to Student enrolls in Course).
+    * **Identification Rule**: Ask what the attribute describes. If it describes an object → Entity Attribute. If it describes the link → Relationship Attribute.
+
+* **Extracting ERD**: As a heuristic, **Nouns** = Entities/Attributes, and **Verbs** = Relationships.
+
+* **Multiple Relationships**: Two entities can have multiple distinct relationships as long as the meanings differ (e.g., an Employee works for and manages a Department), but it have to be in diffrent meanings.
+
+* **ERD vs. Schema**: ERD is a conceptual design. Do not confuse it with the final implementation phase (SQL tables and foreign keys).
