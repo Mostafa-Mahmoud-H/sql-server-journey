@@ -142,3 +142,69 @@ Translate business requirements into clear system requirements.
 * **Multiple Relationships**: Two entities can have multiple distinct relationships as long as the meanings differ (e.g., an Employee works for and manages a Department), but it have to be in diffrent meanings.
 
 * **ERD vs. Schema**: ERD is a conceptual design. Do not confuse it with the final implementation phase (SQL tables and foreign keys).
+---
+---
+#### **ER Diagram: Types of Entities & Attributes**
+* **Entity** → Strong / Weak
+* **Attribute** → Simple / Composite / Multivalued / Derived / Complex
+---
+1. Entity Types
+    1. **Strong Entity**
+        * An entity whose existence does not depend on the existence of another entity.
+        * A strong entity is identified by a **primary key** and is represented by a **single rectangle** in an ERD.
+    2. **Weak Entity**
+        * An entity whose existence depends on the existence of another entity, called the parent entity.
+        * A weak entity is identified by a **partial key** and is connected to its parent entity through a **relationship**.
+        * A weak entity is represented by a **double rectangle** in an ERD, and its relationship with the parent entity is represented by a **double diamond**, and this relationship is called an **identifying relationship**.
+---
+2. Attribute Types
+    1. **Simple Attribute**
+        * An attribute that cannot be divided into smaller subparts.
+        * Represented by a **single oval** in an ERD.
+    2. **Composite Attribute**
+        * An attribute that can be divided into smaller subparts, which represent more basic attributes with independent meanings.
+        * Represented by a **single oval** connected to multiple ovals in an ERD.
+    3. **Multivalued Attribute**
+        * An attribute that can have multiple values for a single entity instance.
+        * Represented by a **double oval** in an ERD.
+    4. **Derived Attribute**
+        * An attribute whose value can be derived from other attributes in the database.
+        * Represented by a **dashed oval** in an ERD.
+    5. **Complex Attribute**
+        * An attribute that is a combination of composite + multivalued
+        * Represented by a **double oval** connected to multiple ovals in an ERD. 
+---
+* 🔵 **Properties of a Relationship**  
+    1. **Degree of Relationship** :
+        * The number of ***entities*** involved in a relationship.
+        * **Unary** : Involves one entity type (e.g., Employee supervises Employee).
+        * **Binary** : Involves two entity types (e.g., Student enrolls in Course).
+        * **Ternary** : Involves three entity types (e.g., Supplier supplies Product to Store).
+    2. **Participation Constraint** :
+        * The minimum and maximum number of times an entity can participate in a relationship, in a simple word, are all rows of an entity must participate in the relationship or not.
+        * **Total Participation** : An entity must participate in the relationship (all rows of the entity must participate in the relationship).
+        * **Partial Participation** : An entity may or may not participate in the relationship (not all rows of the entity need to participate in the relationship).
+    3. **Cardinality** :
+        * The number of instances of one entity that can be associated with instances of another entity.
+        * **One-to-One** : One instance of Entity A is associated with exactly one instance of Entity B.
+        * **One-to-Many** : One instance of Entity A is associated with zero or many instances of Entity B.
+        * **Many-to-Many** : Many instances of Entity A are associated with zero or many instances of Entity B.
+---
+🔑 **Types of Keys**
+1. **Key** : A set of attributes that uniquely identifies an instance of an entity.
+    1. **Candidate Key** : A ***minimal set*** of attributes that can uniquely identify an instance of an entity.
+        * minimal means that if we remove any attribute from the set, it will no longer uniquely identify the instance. 
+    2. **Alternate Key** : A candidate key that is not selected as the primary key.
+    3. **Primary Key** : A candidate key that is selected as the main identifier for the entity.
+    4. **Composite Key** : A key that consists of two or more attributes that together uniquely identify an instance of an entity.
+    5. **Foreign Key** : A field in one table that references the primary key of another table, used to establish relationships between tables.
+    6. **Super Key** : A set of attributes that uniquely identifies an instance of an entity, it may contain more attributes than necessary to uniquely identify the instance (i.e., it may not be minimal, so it contains extra attributes), we can consider it as a general case.
+    7. **Partial Key** : A set of attributes that uniquely identifies a weak entity, it is used in conjunction with the primary key of the parent entity to form a composite key for the weak entity.
+
+
+    * **Example** : (minimal unique cols)
+        * ID  (Candidate key) (PK)
+        * Phone  (Candidate key) (Alternative key)
+        * Nationality_ID (Candidate key) (Alternative key)
+            * All of them considered as Candidate keys(also considered as Super keys) 
+            * If we chose ID to be a PK, the rest of cols considered as alternative keys.
