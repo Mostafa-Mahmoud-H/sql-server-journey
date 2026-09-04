@@ -209,6 +209,8 @@ Translate business requirements into clear system requirements.
             * All of them considered as Candidate keys(also considered as Super keys) 
             * If we chose ID to be a PK, the rest of cols considered as alternative keys.
 ***
+### **USE CASE**
 ![Use Case](Tasks/er_case_study_poster_warm.png)
 ***
+### **USE CASE ER DIAGRAM**
 ![ERD](Tasks/erdplus.png)
