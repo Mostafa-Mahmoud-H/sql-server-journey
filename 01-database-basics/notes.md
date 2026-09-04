@@ -211,4 +211,4 @@ Translate business requirements into clear system requirements.
 ***
 ![Use Case](Tasks/er_case_study_poster_warm.png)
 ***
-![ERD](Tasks\erdplus.png)
+![ERD](Tasks/erdplus.png)
